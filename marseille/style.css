@@ -10,9 +10,8 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 26px;
-  background-color: #bae8e8;
+  background-color: #fff;
 }
-
 
 :root {
   --bar-width: 50px;
@@ -111,12 +110,11 @@ a{
 }
 
 .navbar header{
-    font-size: 22px;
-    color: white;
-    text-align: center;
-    line-height: 70px;
-    background-color: rgba(182, 152, 112, 0.7);
-
+   font-size: 22px;
+   color: white;
+   text-align: center;
+   line-height: 70px;
+   background-color: rgba(182, 152, 112, 0.7);
 }
 
 .nav-links a{
@@ -131,8 +129,6 @@ a{
    border-top: 1px solid rgba(255, 255, 255, 0.1);
    transition: 0.4s;
 }
-
-
 
 .nav-links li{
    margin-left: -35px;
@@ -151,9 +147,8 @@ a{
 }
 
 .element{
-   z-index: 100;
+   z-index: 2;
 }
-
 
 .bouton{
   font-size: 40px;
@@ -200,6 +195,7 @@ a{
    align-items: center;
    flex-direction: column;
    height: 100%;
+   width: 100%;
 }
 
 .Actualités h1{
@@ -209,6 +205,7 @@ a{
    padding-right: 1400px;
    font-weight: bold;
 }
+
 .slide img{
    height: auto;
    max-width: 40%;
@@ -218,11 +215,12 @@ a{
 }
 
 .slide div{
-   height: auto;
+   min-height: auto;
    min-width: 40%;
    font-size: 14px;
    text-align: left;
    color: #2d334a;
+   font-weight: bold;
 }
 
 .slide div p{
@@ -268,11 +266,12 @@ a{
 
 .slider {
    display: flex;
-   height: 500px;
+   min-height: 500px;
+   width: auto;
    transition: transform 0.5s ease-in-out;
 }
 
- .slide {
+.slide {
    min-width: 100%;
    box-sizing: border-box;
    display: inline-flex;
@@ -305,10 +304,11 @@ a{
 
 .grid{
    display: grid;
-   max-width: 1300px;
-   width: 80%;
-   height: auto;
+   width: 85%;
+   min-height: 1000px;
+   height: 100%;
    grid-template-columns: repeat(4, 1fr);
+   flex-wrap: wrap;
    justify-content: center;
    gap: 25px;
    margin: 20px;
@@ -335,8 +335,6 @@ a{
 }
 
 .card{
-   width: 370px;
-   height: 400px;
    font-size: 17px;
    background-color: whitesmoke;
 }
@@ -347,14 +345,14 @@ a{
 }
 
 .card img{
-   width: 370px;
+   width: 100%;
    height: 50%;
 }
 
 .card h3,
 .card p{
    text-align: left;
-   padding-left: 15px
+   padding-left: 15px;
 }
 
 .card p{
@@ -366,19 +364,61 @@ a{
    margin: 50px auto;
 }
 
+.newsletter{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 40vh;
+}
+
+.box{
+   background-color: whitesmoke;
+   height: 85%;
+   width: 40%;
+   margin: 50px;
+   border-radius: 25px;
+   text-align: center;
+}
+
+.newslettertext{
+   flex-direction: column;
+   padding: 0 15px;
+}
+
+input[type=text], input[type=submit] {
+   width: 80%;
+   padding: 12px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+}
+
+input[type=submit] {
+   background-color: #0446aa;
+   color: white;
+   border: none;
+   margin-bottom: 20px;
+}
+
+input[type=submit]:hover {
+   opacity: 0.8;
+}
+
 footer h1{
    color: #FFFFFF;
    font-size: 100px;
    font-weight: 900;
-   text-shadow: -5px 5px 0px #00e6e6, -10px 10px 0px #01cccc, -15px 15px 0px #00bdbd;
+   opacity: 0.7;
+   text-shadow: -5px 5px 0px #00e6e6ab, -10px 10px 0px #01ccccb2, -15px 15px 0px #00bdbda9;
 }
 
 footer{
    display: flex;
    align-items: center;
    justify-content: center;
-   height: 370px;
-   background-color: #e3f6f5;
+   height: 150px;
+   background-color: rgb(221, 228, 227);
 
    position: relative;
    isolation: isolate;
@@ -389,8 +429,9 @@ footer::after{
    position: absolute;
    z-index: -1;
    inset: 0;
-   opacity: 0.3;
-   background-image: url(blason-marseille-removebg-preview.png);
+   opacity: 0.5;
+   background-image: url(image/blason-marseille-removebg-preview1.png);
+   background-size: auto;
    background-position: center;
    background-repeat: no-repeat;
 }
