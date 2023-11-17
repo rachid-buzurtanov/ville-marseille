@@ -1,0 +1,58 @@
+/* POUR LA PAGE RANDO */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:rgb(255, 255, 255)
+}
+section{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height:42em;
+    padding:2em 8em;
+}
+section div{
+    flex-direction: row;
+    justify-content: end;
+    gap:2em;
+    padding:1em;
+    backdrop-filter:brightness(50%) blur(1px);
+    line-height: 1.5;
+    opacity: 0%;
+    transition: opacity 1s;
+}
+section:hover div{
+    transition: opacity 1s;
+    opacity: 100%
+}
+#sugiton{
+    background-image:url(images/6.jpg);
+    background-position: bottom;
+    background-size: cover;
+}
+#cretes{
+    background:url(images/7.jpg);
+    background-size: cover;
+    background-position:center
+}
+#niolon{
+    background:url(images/8.jpg);
+    background-size: cover;
+    background-position:20%
+}
+#etoile{
+    background:url(images/9.jpg);
+    background-size: cover;
+    background-position: 15%;
+}
+@media only screen and (max-width:850px){
+    section{
+        height:auto;
+        padding:1em 0.5em
+    }
+    section div{
+        opacity:100%
+    }
+}
