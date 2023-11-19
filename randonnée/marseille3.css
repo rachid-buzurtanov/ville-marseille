@@ -1,16 +1,36 @@
-/* POUR LA PAGE RANDO */
+
+body{
+    font-size: 26px;
+    margin: 0;
+    padding: 0;
+    animation: slidein 0.75s;
+}
+
+@keyframes slidein {
+    from {
+        opacity: 0;
+        transform: rotateX(-30deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
 main{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+    width: 100%;
+    height: max-content;
     color:rgb(255, 255, 255)
 }
 section{
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    height:42em;
     padding:2em 8em;
 }
 section div{
@@ -24,26 +44,26 @@ section div{
     transition: opacity 1s;
 }
 section:hover div{
-    transition: opacity 1s;
+    transition: opacity 0.7s ease-in;
     opacity: 100%
 }
 #sugiton{
-    background-image:url(images/6.jpg);
+    background-image:url(../image/6bis.jpg);
     background-position: bottom;
     background-size: cover;
 }
 #cretes{
-    background:url(images/7.jpg);
+    background:url(../image/7.jpg);
     background-size: cover;
     background-position:center
 }
 #niolon{
-    background:url(images/8.jpg);
+    background:url(../image/8.jpg);
     background-size: cover;
     background-position:20%
 }
 #etoile{
-    background:url(images/9.jpg);
+    background:url(../image/9.jpg);
     background-size: cover;
     background-position: 15%;
 }

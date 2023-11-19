@@ -11,6 +11,19 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 26px;
   background-color: #fff;
+  animation: slidein 0.75s;
+}
+
+@keyframes slidein {
+   from {
+       opacity: 0;
+       transform: rotateX(-30deg);
+   }
+
+   to {
+       opacity: 1;
+       transform: rotateX(0);
+   }
 }
 
 :root {

@@ -1,25 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 26px;
+    font-weight: bold;
     height: 100%;
     background-color: rgb(224, 224, 224);
+    animation: slidein 0.75s;
 }
 
+@keyframes slidein {
+    from {
+        opacity: 0;
+        transform: rotateX(-30deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
 
 .main{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 80vh;
 }
 
 input[type=text], textarea, input[type=email] {
@@ -171,5 +178,4 @@ footer{
     position: relative;
     background-color: #f0f0f0;
     width: 100%;
-    height: 10vh;
 }
